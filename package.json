@@ -1,0 +1,35 @@
+{
+  "name": "adbeeper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf node_modules/",
+    "lint": "tslint \"src/**/*.ts\"",
+    "lint-fix": "tslint \"src/**/*.ts\" --fix",
+    "build": "tsc",
+    "package": "webpack -d --mode development && workbox generateSW",
+    "serve": "serve ./public/",
+    "dev": "npm run build; npm run package && npm run serve"
+  },
+  "author": "André Cipriani Bandarra",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/jquery": "^3.5.16",
+    "serve": "^11.3.2",
+    "ts-loader": "^7.0.0",
+    "tslint": "^6.0.0",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "workbox-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "@vieratech/wadb": "^0.1.1",
+    "jquery": "^3.6.3",
+    "webmidi": "^3.1.2",
+    "xterm": "^5.1.0",
+    "xterm-addon-fit": "^0.7.0"
+  }
+}
